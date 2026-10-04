@@ -1,0 +1,44 @@
+<div class="st-rw-drawer">
+    <div class="inline-drawer">
+        <div class="inline-drawer-toggle inline-drawer-header">
+            <b>Render WASM · Rust 渲染引擎 + 基准</b>
+            <div class="inline-drawer-icon fa-solid fa-circle-chevron-down down"></div>
+        </div>
+        <div class="inline-drawer-content">
+            <p class="st-rw-desc">
+                内置 <b>Rust 编译的 markdown 引擎</b>（WebAssembly，278 KB，无第三方依赖）。<br>
+                基准测试会用你<b>当前聊天里真实的消息正文</b>，把渲染开销拆成三份分别计时，
+                看清到底该优化谁：
+            </p>
+            <ul class="st-rw-list">
+                <li>markdown 解析 —— <b>Rust/WASM</b> vs showdown(JS)</li>
+                <li>HTML 净化 —— DOMPurify（DOM 型，WASM 无法替代）</li>
+                <li>模板编译求值 —— <code>new Function</code>（JS 引擎，WASM 无法替代）</li>
+            </ul>
+
+            <div class="st-rw-row">
+                <button id="st-rw-bench" class="menu_button">
+                    <i class="fa-solid fa-stopwatch"></i> 运行基准测试
+                </button>
+                <button id="st-rw-copy" class="menu_button">
+                    <i class="fa-solid fa-clipboard"></i> 复制报告
+                </button>
+            </div>
+
+            <div class="st-rw-options">
+                <label class="checkbox_label">
+                    <input type="checkbox" id="st-rw-rounds" checked>
+                    <span>跑 3 轮取平均（更稳，稍慢）</span>
+                </label>
+            </div>
+
+            <div id="st-rw-status" class="st-rw-status">就绪。</div>
+            <pre id="st-rw-output" class="st-rw-output"></pre>
+
+            <p class="st-rw-note">
+                引擎 API 已暴露为 <code>window.STRenderWasm.render(markdown)</code>，
+                其它扩展可以直接调用。
+            </p>
+        </div>
+    </div>
+</div>

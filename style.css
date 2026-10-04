@@ -1,0 +1,65 @@
+.st-rw-desc {
+    font-size: 0.9em;
+    opacity: 0.88;
+    margin: 4px 0 6px 0;
+    line-height: 1.55;
+}
+
+.st-rw-list {
+    font-size: 0.88em;
+    opacity: 0.88;
+    margin: 4px 0 8px 0;
+    padding-left: 20px;
+    line-height: 1.6;
+}
+
+.st-rw-row {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin-bottom: 6px;
+}
+
+.st-rw-options {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    margin: 4px 0 6px 0;
+    font-size: 0.9em;
+}
+
+.st-rw-status {
+    font-size: 0.9em;
+    opacity: 0.9;
+    margin: 8px 0 4px 0;
+    min-height: 1.2em;
+}
+
+.st-rw-output {
+    max-height: 360px;
+    overflow: auto;
+    white-space: pre-wrap;
+    word-break: break-all;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.8em;
+    line-height: 1.45;
+    padding: 8px;
+    margin: 0;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.25);
+}
+
+.st-rw-note {
+    font-size: 0.82em;
+    opacity: 0.75;
+    margin: 8px 0 0 0;
+    line-height: 1.5;
+}
+
+.st-rw-note code,
+.st-rw-list code {
+    font-size: 0.95em;
+    padding: 0 3px;
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.25);
+}

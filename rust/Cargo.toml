@@ -1,0 +1,19 @@
+[package]
+name = "st-render-wasm"
+version = "0.1.0"
+edition = "2021"
+description = "SillyTavern 渲染加速：Rust/WASM 版 markdown 引擎"
+license = "MIT"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+pulldown-cmark = { version = "0.12", default-features = false, features = ["html"] }
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true
